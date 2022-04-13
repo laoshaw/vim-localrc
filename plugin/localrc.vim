@@ -26,7 +26,7 @@ augroup plugin-localrc
   \                  if argc() == 0
   \                |   call localrc#load(g:localrc_filename, getcwd())
   \                | endif
-  autocmd BufNewFile,BufReadPost * nested
+  autocmd BufNewFile,BufReadPost,BufReadPre * nested
   \   call localrc#load(g:localrc_filename)
   autocmd FileType * nested
   \   call localrc#load(
